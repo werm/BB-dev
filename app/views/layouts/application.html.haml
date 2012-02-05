@@ -1,0 +1,29 @@
+!!!
+%html
+	%head
+		%title BbDev
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					%a.brand{:href => "/home"}
+						Baby Brag
+					.nav-collapse
+						%ul.nav
+							%li
+								= active_link_to 'Home', '/'
+							%li
+								%a{:href => "/baby"} My Baby 
+							%li.pull-right
+								= render 'devise/menu/registration_items'
+							%li
+								= render 'devise/menu/login_items'
+						%form.navbar-search.pull-right{:action => ""}
+							%input.search-query.span2{:placeholder => "Search", :type => "text"}
+		#main.container
+			%p.notice-msg= notice
+			%p.alert-msg= alert
+			= yield

@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @baby.name
+%p
+  %b City:
+  = @baby.city
+%p
+  %b State:
+  = @baby.state
+%p
+  %b Sex:
+  = @baby.sex
+%p
+  %b Mother:
+  = @baby.mother
+%p
+  %b Father:
+  = @baby.father
+%p
+  %b Birthday:
+  = @baby.birthday
+%p
+  %b Word:
+  = @baby.word
+%p
+  %b Walk:
+  = @baby.walk
+%p
+  %b Other:
+  = @baby.other
+
+= link_to 'Edit', edit_baby_path(@baby)
+\|
+= link_to 'Back', babies_path

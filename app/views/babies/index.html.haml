@@ -1,0 +1,37 @@
+%h1 Listing babies
+
+%table
+  %tr
+    %th Name
+    %th City
+    %th State
+    %th Sex
+    %th Mother
+    %th Father
+    %th Birthday
+    %th Word
+    %th Walk
+    %th Other
+    %th
+    %th
+    %th
+
+  - @babies.each do |baby|
+    %tr
+      %td= baby.name
+      %td= baby.city
+      %td= baby.state
+      %td= baby.sex
+      %td= baby.mother
+      %td= baby.father
+      %td= baby.birthday
+      %td= baby.word
+      %td= baby.walk
+      %td= baby.other
+      %td= link_to 'Show', baby
+      %td= link_to 'Edit', edit_baby_path(baby)
+      %td= link_to 'Destroy', baby, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Baby', new_baby_path

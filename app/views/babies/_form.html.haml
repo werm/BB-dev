@@ -1,0 +1,17 @@
+= simple_form_for(@baby) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+    = f.input :city
+    = f.input :state
+    = f.input :sex
+    = f.input :mother
+    = f.input :father
+    = f.input :birthday
+    = f.input :word
+    = f.input :walk
+    = f.input :other
+
+  .actions
+    = f.button :submit
